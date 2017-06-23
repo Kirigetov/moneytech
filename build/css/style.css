@@ -248,7 +248,7 @@ a { text-decoration: none; }
 .member__col { display: inline-block; width: 25%; text-align: center; }
 .member__photo { width: 200px; height: 200px; -webkit-border-radius: 50%; border-radius: 50%; margin: 0 auto 25px; overflow: hidden; }
 .member__photo img { width: 100%; }
-.member__name { font-size: 30px; line-height: 1; color: #005E30; font-family: "MuseoSansCyrl-Light", Arial, sans-serif; }
+.member__name { font-size: 28px; line-height: 1; color: #005E30; font-family: "MuseoSansCyrl-Light", Arial, sans-serif; }
 .member__position { margin-bottom: 10px; font-size: 20px; color: #444e5a; font-family: "MuseoSansCyrl-Light", Arial, sans-serif; }
 .member__mail { -webkit-transition: opacity 0.15s; transition: opacity 0.15s; }
 .member__mail .icon-mail { background-image: url("../img/icons.png"); width: 34px; height: 27px; background-position: -147px -52px; }
