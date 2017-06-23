@@ -158,6 +158,7 @@ a { text-decoration: none; }
 .feature_lamp:before { background-image: url("../img/icons.png"); width: 40px; height: 44px; background-position: -103px 0px; top: -8px; }
 .feature_finger:before { background-image: url("../img/icons.png"); width: 33px; height: 44px; background-position: -185px 0px; top: 12px; }
 .feature_finger_mod:before { top: -8px; }
+.feature_finger_mod_es:before { top: 4px; }
 .feature_arr_up:before { background-image: url("../img/icons.png"); width: 36px; height: 39px; background-position: -41px -98px; top: 12px; }
 .feature_gear:before { background-image: url("../img/icons.png"); width: 45px; height: 45px; background-position: -54px 0px; top: 12px; left: -4px; }
 .feature_bag:before { background-image: url("../img/icons.png"); width: 34px; height: 48px; background-position: -147px 0px; top: -10px; }
