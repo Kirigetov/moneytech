@@ -1,0 +1,33 @@
+// section_mt
+.section_mt
+	padding: 45px 0 55px 
+	text-align: center
+	+r(767)
+
+	.section__img
+		margin: -40px auto 0
+		max-width: 973px
+		img
+			width: 100% 
+		+r(767)
+			margin-top: 0
+	.section__img-mob
+		display: none
+		+r(600)
+			display: block
+	.section__img-mobItem
+		width: 300px
+		margin: 0 auto 50px 
+		img
+			width: auto
+			max-width: 80px 
+	.section__img-mobTitle
+		font-size: 22px 
+		text-transform: uppercase 
+		+med
+		color: #252525 
+		img
+		&:not(:last-child)
+			margin-bottom: 20px
+		&_sm
+			font-size: 18px

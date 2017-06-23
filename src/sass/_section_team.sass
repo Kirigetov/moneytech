@@ -1,0 +1,49 @@
+// section team
+.members
+	margin: 30px 0 
+	font-size: 0
+	+r(1023)
+		margin: 30px 0 -20px 
+
+.member
+	display: inline-block
+	vertical-align: top
+	&__col
+		display: inline-block
+		width: 25%
+		text-align: center 
+		+r(1023)
+			width: 50%
+			margin-bottom: 60px 
+		+r(767)
+			width: 100% 
+			margin-bottom: 45px
+	&__photo
+		width: 200px 
+		height: 200px 
+		border-radius: 50% 
+		margin: 0 auto 25px
+		overflow: hidden
+		img
+			width: 100% 
+		+r(767)
+			width: 150px 
+			height: 150px 
+	&__name
+		font-size: 30px
+		line-height: 1
+		color: #005E30 
+		+light
+		+r(767)
+			font-size: 26px
+	&__position
+		margin-bottom: 10px 
+		font-size: 20px
+		color: #444e5a
+		+light
+	&__mail
+		.icon-mail
+			+s('mail')
+		transition: opacity 0.15s 
+		&:hover
+			opacity: 0.7 

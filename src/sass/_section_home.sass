@@ -1,0 +1,106 @@
+// section home
+.tagline
+	+clr
+	&__title
+		margin-bottom: 75px 
+		font-size: 40px
+		color: #FFF 
+		+light
+		line-height: 1.23
+		span
+			display: block
+			letter-spacing: 0.8px
+			+med
+		+r(1023)
+			margin-bottom: 55px
+		+r(767)
+			font-size: 34px
+	&__btns
+		float: right
+		margin-right: 23px
+		+r(1023)
+			float: none
+			margin-right: 0
+
+.join-btn
+	display: inline-block
+	width: 290px 
+	margin-bottom: 50px
+	padding: 10px 0
+	border-radius: 24px
+	font-size: 24px
+	background: rgba(#fff, 0.7) 
+	color: #02852e
+	transition: background 0.15s
+	cursor: pointer
+	text-align: center
+	+light
+	&:hover
+		background: rgba(#fff, 1) 
+
+.socials
+	font-size: 0
+
+.social
+	display: inline-block
+	height: 40px
+	padding: 0 11px 
+	transition: opacity 0.15s
+	&:hover
+		opacity: 0.75
+	+r(767)
+		padding: 0px 8px 
+
+.feature
+	position: relative
+	margin-bottom: 15px 
+	padding-left: 52px 
+	font-size: 24px
+	color: #fff
+	+med
+	line-height: 1.23
+	+r(767)
+		margin-bottom: 25px
+		font-size: 22px
+	&:before
+		content: "" 
+		position: absolute
+		left: 0
+		display: inline-block
+		margin-right: 7px 
+	&_lamp
+		&:before
+			+s('lamp')
+			top: -8px 
+	&_finger
+		&:before
+			+s('finger')
+			top: 12px
+	&_finger_mod
+		&:before
+			top: -8px
+	&_arr_up
+		&:before
+			+s('arr_up')
+			top: 12px 
+	&_gear
+		&:before
+			+s('gear')
+			top: 12px 
+			left: -4px 
+	&_bag
+		&:before
+			+s('bag')
+			top: -10px
+
+
+.icon-media
+	+s('media')
+.icon-facebook
+	+s('facebook')
+.icon-twit
+	+s('twit')
+.icon-at
+	+s('at')
+.icon-inst
+	+s('inst')

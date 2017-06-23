@@ -1,0 +1,59 @@
+// section_why
+
+.why
+	position: relative
+	padding: 20px 0 67px
+	&__img
+		width: 80%
+		margin: 0 auto 10px
+		max-width: 820px
+		img
+			width: 100% 
+		+r(767)
+			display: none
+	&__cards
+		// margin: 0 -40px 
+		text-align: center
+		font-size: 0
+	&__cols
+		display: inline-block
+		width: 33.3% 
+		+r(767)
+			width: 100% 
+			&:not(:last-child)
+				margin-bottom: 25px
+	.section__title
+		margin-bottom: 20px
+		color: #005e30
+		+light
+		font-size: 48px
+		text-transform: uppercase
+		text-align: center
+		+r(1023)
+			font-size: 40px
+
+.why-card
+	display: inline-block
+	vertical-align: top
+	width: 262px 
+	min-height: 365px 
+	margin: 0 4% 
+	padding: 48px 26px 20px
+	background-color: #24bc52
+	box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.2)
+	text-align: center
+	+med
+	+r(1023)
+		width: 230px 
+		padding: 48px 15px 20px 
+	+r(767)
+		max-width: 270px 
+		width: 100% 
+		min-height: 345px 
+	&__img
+		margin-bottom: 35px
+	&__content
+		font-size: 20px
+		line-height: 1
+		color: #C8EED4 
+		

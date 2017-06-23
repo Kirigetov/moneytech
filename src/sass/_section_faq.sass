@@ -1,0 +1,25 @@
+// faq
+
+.faq-list
+	margin: 30px 0 
+
+.faq
+	&:not(:last-child)
+		margin-bottom: 15px
+	&__answer
+		+light
+	&__question
+		font-size: 24px
+		color: #24BC52 
+		+bold
+		+r(767)
+			font-size: 22px
+		&:before
+			content: "Q: " 
+			color: currentColor
+			font-size: 24px 
+	&__answer
+		font-size: 18px
+		color: #000 
+	a
+		color: #24BC52 

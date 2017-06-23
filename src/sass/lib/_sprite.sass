@@ -1,0 +1,128 @@
+$icons: (0:0)
+$icons: map-merge($icons,(arr_up: (X: -41px, Y:-98px, W: 36px, H: 39px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(arrowUp: (X: 0px, Y:0px, W: 50px, H: 50px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(arrow_down: (X: -185px, Y:-92px, W: 16px, H: 16px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(at: (X: 0px, Y:-98px, W: 37px, H: 40px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(bag: (X: -147px, Y:0px, W: 34px, H: 48px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(facebook: (X: -185px, Y:-48px, W: 23px, H: 40px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(finger: (X: -185px, Y:0px, W: 33px, H: 44px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(gear: (X: -54px, Y:0px, W: 45px, H: 45px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(inst: (X: -103px, Y:-48px, W: 38px, H: 40px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(lamp: (X: -103px, Y:0px, W: 40px, H: 44px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(mail: (X: -147px, Y:-52px, W: 34px, H: 27px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(media: (X: 0px, Y:-54px, W: 48px, H: 40px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+$icons: map-merge($icons,(twit: (X: -52px, Y:-54px, W: 45px, H: 40px, TW: 218px, TH: 138px, IMG: '../img/icons.png')))
+
+
+// Gets an attribute from the sass map
+@function icon-attr($icon, $attr)
+	$icon: map-get($icons, $icon)
+	@return map-get($icon, $attr)
+
+@mixin sprite($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	width: icon-attr($iconName, W)
+	height: icon-attr($iconName, H)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-position($iconName)
+	background-position: icon-attr($iconName, X) icon-attr($iconName, Y)
+@mixin sprite-retina($iconName)
+	background-image: url(icon-attr($iconName, IMG))
+	$width: icon-attr($iconName, W)
+	$height: icon-attr($iconName, H)
+	width: $width/2
+	height: $height/2
+	$x: icon-attr($iconName, X)
+	$y: icon-attr($iconName, Y)
+	background-position: $x/2 $y/2
+	$tw: icon-attr($iconName, TW) 	
+	$th: icon-attr($iconName, TH)
+	background-size: $tw/2 $th/2  	
+
+
+@mixin s($i)
+	+sprite($i)
+@mixin sp($i)
+	+sprite-position($i)
+@mixin sr($i)
+	+sprite-retina($i)	
+
+//
+//.icon-arr_up
+//	width: 36px
+//	height: 39px
+//	background-image: url('../img/icons.png')
+//	background-position: -41px -98px
+//
+//.icon-arrowUp
+//	width: 50px
+//	height: 50px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px 0px
+//
+//.icon-arrow_down
+//	width: 16px
+//	height: 16px
+//	background-image: url('../img/icons.png')
+//	background-position: -185px -92px
+//
+//.icon-at
+//	width: 37px
+//	height: 40px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -98px
+//
+//.icon-bag
+//	width: 34px
+//	height: 48px
+//	background-image: url('../img/icons.png')
+//	background-position: -147px 0px
+//
+//.icon-facebook
+//	width: 23px
+//	height: 40px
+//	background-image: url('../img/icons.png')
+//	background-position: -185px -48px
+//
+//.icon-finger
+//	width: 33px
+//	height: 44px
+//	background-image: url('../img/icons.png')
+//	background-position: -185px 0px
+//
+//.icon-gear
+//	width: 45px
+//	height: 45px
+//	background-image: url('../img/icons.png')
+//	background-position: -54px 0px
+//
+//.icon-inst
+//	width: 38px
+//	height: 40px
+//	background-image: url('../img/icons.png')
+//	background-position: -103px -48px
+//
+//.icon-lamp
+//	width: 40px
+//	height: 44px
+//	background-image: url('../img/icons.png')
+//	background-position: -103px 0px
+//
+//.icon-mail
+//	width: 34px
+//	height: 27px
+//	background-image: url('../img/icons.png')
+//	background-position: -147px -52px
+//
+//.icon-media
+//	width: 48px
+//	height: 40px
+//	background-image: url('../img/icons.png')
+//	background-position: 0px -54px
+//
+//.icon-twit
+//	width: 45px
+//	height: 40px
+//	background-image: url('../img/icons.png')
+//	background-position: -52px -54px
+//

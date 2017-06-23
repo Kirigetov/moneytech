@@ -1,0 +1,87 @@
+// section_tech
+.tech
+	&__descr
+		max-width: 700px 
+		margin: 0 auto 20px
+		color: #000
+		font-size: 24px
+		text-align: center
+		+light
+		+r(1023)
+			font-size: 22px
+	&__descr-links
+		margin-top: 10px
+		a
+			display: inline-block
+			vertical-align: top
+			padding: 0 20px  
+			color: #24bc52
+			font-size: 30px
+			+med
+
+.tech-farm
+	&:not(:last-child)
+		margin-bottom: 20px 
+		+r(767)
+			margin-bottom: 30px
+	&__caption
+		margin-bottom: 10px
+		color: #24bc52
+		+light
+		font-size: 36px
+		text-transform: uppercase
+		text-align: center
+		+r(1023)
+			font-size: 32px
+		+r(767)
+			font-size: 24px 
+	&__params
+		max-width: 100% 
+		padding: 15px 0
+		border: 2px solid #24bc52
+		font-size: 0
+	&__cols
+		position: relative
+		display: inline-block
+		width: 50% 
+		vertical-align: top
+		font-size: 30px
+		line-height: 1.2 
+		+light
+		color: #444e5a
+		+r(1023)
+			font-size: 26px
+		+r(767)
+			width: 100% 
+			font-size: 20px 
+		span
+			color: #005e30
+			text-transform: uppercase
+			+bold
+		b
+			+bold
+		&_left
+			text-align: right
+			padding: 5px 25px 5px 10px
+			+r(767)
+				padding: 0px 15px 15px
+				text-align: left
+		&_right
+			text-align: left
+			padding: 5px 10px 5px 25px 
+			+r(767)
+				padding: 15px 15px 0
+			&:after
+				content: "" 
+				position: absolute
+				top: 0
+				bottom: 0 
+				left: 0
+				width: 2px   
+				background: #24bc52
+				+r(767)
+					bottom: auto
+					right: 10px
+					left: 10px
+					width: auto
+					height: 2px  

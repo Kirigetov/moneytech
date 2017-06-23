@@ -1,0 +1,256 @@
+.section
+	position: relative
+	&_start
+		padding-top: 70px 
+		padding-bottom: 50px 
+		+clr
+		font-size: 0
+	&-bg
+		+coverdiv
+		background-repeat: no-repeat 
+		background-position: 50% 50%
+		background-size: cover 
+	&__parts
+		+clr
+		width: 915px 
+		margin: 0 auto 
+		+r(1023)
+			width: 100% 
+	&__part
+		width: 50% 
+		padding: 5px 0 0
+		&-left
+			float: left
+			padding-right: 30px 
+			+r(1023)
+				float: none
+				width: 100%
+				text-align: center
+				padding-right: 0
+		&-right
+			float: right
+			padding-left: 8px
+			padding-top: 61px 
+			+r(1023)
+				float: none
+				width: 70%
+				margin: 0 auto
+			+r(767)
+				width: 100% 
+
+.section_type
+	.inner
+		border-top: 10px solid #24bc52
+		padding: 15px 15px 35px
+	.section__title
+		margin-bottom: 15px
+		color: #005e30
+		+light
+		font-size: 48px
+		text-transform: uppercase
+		text-align: center
+		+r(1023)
+			font-size: 40px
+			margin-bottom: 25px 
+		+r(767)
+			font-size: 30px
+
+.is-whitesmoke
+	background-color: whitesmoke
+
+.timer
+	text-align: right
+	margin-right: 78px
+	+r(1023)
+		text-align: center
+		margin-right: 0
+		margin-bottom: 40px
+	&__body	
+		display: inline-block
+	&__col
+		display: inline-block
+		&:not(:last-child)
+			margin-right: 10px 
+		
+	&__item
+		position: relative
+		width: 80px 
+		padding: 10px 0
+		font-size: 52px 
+		color: #005e30
+		background: #FFF 
+		opacity: 0.7
+		border-radius: 12px
+		line-height: 1
+		text-align: center
+		+light 
+		+r(767)
+			width: 65px 
+			font-size: 42px
+		&:after
+			content: "" 
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			height: 50%
+			background-color: #dee2df
+			border-radius: 12px 12px 0 0 
+			z-index: -1 
+
+.text
+	margin-bottom: 15px
+	font-size: 24px
+	color: #000
+	line-height: 1.2
+	+light
+	.is-green
+		color: #24BC52 
+	+r(1023)
+		font-size: 22px
+		line-height: 1.3
+	+r(767)
+		font-size: 18px
+
+.companies
+	&__list
+		margin-top: 30px 
+		font-size: 0
+		+r(1023)
+			text-align: center
+	li
+		display: inline-block
+		margin-bottom: 40px 
+		vertical-align: top
+		padding: 0 40px 
+		+r(1023)
+			width: 33.3% 
+			padding: 0 10px  
+		+r(767)
+			width: 50% 
+		+r(600)
+			width: 100% 
+		&:before
+			content: "" 
+			display: inline-block
+			vertical-align: middle
+			height: 100% 
+			
+
+.popup
+	display: none
+	position: fixed
+	top: 50% 
+	left: 50% 
+	transform: translate(-50%, -50%) 
+	padding: 40px 50px 60px
+	max-width: 435px 
+	width: 90% 
+	+vertical
+	z-index: 999 
+	opacity: 0.95
+	background-color: white
+	border-radius: 2px
+	box-shadow: 0 0 38px rgba(20, 20, 21, 0.2)
+	+r(767)
+		padding: 40px 30px 60px 
+	&.is-open
+		display: block
+	.field
+		margin-bottom: 20px
+	input
+		height: 50px 
+		line-height: 50px
+		border-bottom: 1px solid rgba(#000, 0.7)
+		width: 100%
+		font-size: 17px
+		color: rgba(#000, 0.7) 
+		+light
+
+	button
+		margin-top: 30px 
+		min-width: 226px 
+		padding: 10px 20px
+		background-color: #093
+		border: 1px solid rgba(1, 2, 2, 0.07)
+		box-shadow: 5.5px 9.5px 20px rgba(20, 20, 21, 0.08)
+		+light
+		font-size: 27px 
+		text-transform: uppercase
+		color: #FFF 
+		-webkit-border-radius: 24px 
+		border-radius: 24px 
+		+r(767)
+			font-size: 24px
+		&.popup__btn_ru
+			+r(600)
+				font-size: 18px
+
+.lang
+	position: absolute
+	top: 5px
+	right: 20px
+	display: inline-block 
+	text-align: center
+	&:hover
+		.lang__list
+			visibility: visible
+			opacity: 1
+	&__current,
+	&__link
+		display: block
+		text-decoration: none 
+		+med
+		padding: 15px 0
+		font-size: 18px
+		color: #252525
+	&__current
+		position: relative
+		.lang__link
+			padding: 0 
+		&:after
+			content: "" 
+			display: inline-block
+			+s('arrow_down')
+			width: 14px 
+			margin-bottom: -1px
+			margin-left: 3px 
+	&__link
+		background: #FFF 
+		transition: background 0.2s
+		cursor: pointer
+		&:hover
+			background: #e1e1e1
+		&:active
+			color: #009933 
+	&__list
+		position: relative
+		margin-top: -2px 
+		z-index: 10 
+		visibility: hidden
+		opacity: 0
+		transition: opacity 0.2s
+	li
+		width: 70px 
+
+.lang_mob
+	position: relative
+	top: auto 
+	right: auto 
+	display: block
+	text-align: right
+	margin-right: 20px
+	margin-top: 10px
+	.lang__current
+		float: right
+		&:after
+			content: none 
+	.lang__list
+		overflow: hidden
+		visibility: visible
+		opacity: 1
+		margin-right: 50px
+	li
+		display: inline-block
+		width: 50px 
+		text-align: center
