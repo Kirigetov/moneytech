@@ -97,7 +97,7 @@ a { text-decoration: none; }
 .lang li { width: 70px; }
 
 .lang_mob { position: relative; top: auto; right: auto; display: block; text-align: right; margin-right: 20px; margin-top: 10px; }
-.lang_mob .lang__current { float: right; }
+.lang_mob .lang__current { float: right; min-width: 50px; text-align: center; }
 .lang_mob .lang__current:after { content: none; }
 .lang_mob .lang__list { overflow: hidden; visibility: visible; opacity: 1; margin-right: 50px; }
 .lang_mob li { display: inline-block; width: 50px; text-align: center; }
