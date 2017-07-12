@@ -1,59 +1,3 @@
-.section
-	position: relative
-	&_start
-		padding-top: 70px 
-		padding-bottom: 50px 
-		+clr
-		font-size: 0
-	&-bg
-		+coverdiv
-		background-repeat: no-repeat 
-		background-position: 50% 50%
-		background-size: cover 
-	&__parts
-		+clr
-		width: 915px 
-		margin: 0 auto 
-		+r(1023)
-			width: 100% 
-	&__part
-		width: 50% 
-		padding: 5px 0 0
-		&-left
-			float: left
-			padding-right: 30px 
-			+r(1023)
-				float: none
-				width: 100%
-				text-align: center
-				padding-right: 0
-		&-right
-			float: right
-			padding-left: 8px
-			padding-top: 21px 
-			+r(1023)
-				float: none
-				width: 70%
-				margin: 0 auto
-			+r(767)
-				width: 100% 
-
-.section_type
-	.inner
-		border-top: 10px solid #24bc52
-		padding: 15px 15px 35px
-	.section__title
-		margin-bottom: 15px
-		color: #005e30
-		+light
-		font-size: 48px
-		text-transform: uppercase
-		text-align: center
-		+r(1023)
-			font-size: 40px
-			margin-bottom: 25px 
-		+r(767)
-			font-size: 30px
 
 .is-whitesmoke
 	background-color: whitesmoke
@@ -98,12 +42,26 @@
 			border-radius: 12px 12px 0 0 
 			z-index: -1 
 
+.text-wrap
+	text-align: center
+	margin: 0 auto 30px
+	&_mb_mid
+		margin-bottom: 40px
+	&_w550
+		max-width: 550px 
+
 .text
 	margin-bottom: 15px
 	font-size: 24px
 	color: #000
 	line-height: 1.2
 	+light
+	&_big
+		font-size: 30px
+	&_f-line
+		paddings-bottom: 20px
+	&_l-height
+		line-height: 1.8 
 	.is-green
 		color: #24BC52 
 	+r(1023)
@@ -137,127 +95,6 @@
 			height: 100% 
 			
 
-.popup
-	display: none
-	position: fixed
-	top: 50% 
-	left: 50% 
-	transform: translate(-50%, -50%) 
-	padding: 40px 50px 60px
-	max-width: 435px 
-	width: 90% 
-	+vertical
-	z-index: 999 
-	opacity: 0.95
-	background-color: white
-	border-radius: 2px
-	box-shadow: 0 0 38px rgba(20, 20, 21, 0.2)
-	+r(767)
-		padding: 40px 30px 60px 
-	&.is-open
-		display: block
-	.field
-		margin-bottom: 20px
-	input
-		height: 50px 
-		line-height: 50px
-		border-bottom: 1px solid rgba(#000, 0.7)
-		width: 100%
-		font-size: 17px
-		color: rgba(#000, 0.7) 
-		+light
-
-	button
-		margin-top: 30px 
-		min-width: 226px 
-		padding: 10px 20px
-		background-color: #093
-		border: 1px solid rgba(1, 2, 2, 0.07)
-		box-shadow: 5.5px 9.5px 20px rgba(20, 20, 21, 0.08)
-		+light
-		font-size: 27px 
-		text-transform: uppercase
-		color: #FFF 
-		-webkit-border-radius: 24px 
-		border-radius: 24px
-		cursor: pointer 
-		+r(767)
-			font-size: 24px
-		&.popup__btn_ru
-			+r(600)
-				font-size: 18px
-
-.lang
-	position: absolute
-	top: 5px
-	right: 20px
-	display: inline-block 
-	text-align: center
-	&:hover
-		.lang__list
-			visibility: visible
-			opacity: 1
-	&__current,
-	&__link
-		display: block
-		text-decoration: none 
-		+med
-		padding: 15px 0
-		font-size: 18px
-		color: #252525
-	&__current
-		position: relative
-		.lang__link
-			padding: 0 
-		&:after
-			content: "" 
-			display: inline-block
-			+s('arrow_down')
-			width: 14px 
-			margin-bottom: -1px
-			margin-left: 3px 
-	&__link
-		background: #FFF 
-		transition: background 0.2s
-		cursor: pointer
-		&:hover
-			background: #e1e1e1
-		&:active
-			color: #009933 
-	&__list
-		position: relative
-		margin-top: -2px 
-		z-index: 10 
-		visibility: hidden
-		opacity: 0
-		transition: opacity 0.2s
-	li
-		width: 70px 
-
-.lang_mob
-	position: relative
-	top: auto 
-	right: auto 
-	display: block
-	text-align: right
-	margin-right: 20px
-	margin-top: 10px
-	.lang__current
-		float: right
-		min-width: 50px 
-		text-align: center
-		&:after
-			content: none 
-	.lang__list
-		overflow: hidden
-		visibility: visible
-		opacity: 1
-		margin-right: 50px
-	li
-		display: inline-block
-		width: 50px 
-		text-align: center
-		
 .notice
 	margin-bottom: 30px 
 	+bold
@@ -266,3 +103,127 @@
 	text-transform: uppercase 
 	text-align: center
 	color: #FFF 
+
+.content
+	max-width: 700px 
+	margin: 0 auto 50px
+	&__list
+	&__list-item
+		display: table
+		width: 100% 
+		margin-bottom: 15px
+	&__list-pic,
+	&__list-text
+		display: table-cell
+		vertical-align: middle
+	&__list-pic
+		width: 40px 
+		text-align: center
+	&__list-text
+		padding-left: 15px
+		color: #000
+		font-size: 24px
+		line-height: 1.2
+		+light
+
+.profit 
+	padding-top: 20px
+	&__points
+		max-width: 980px 
+		margin: 0 auto
+		font-size: 0
+		text-align: center
+
+.circle-item
+	display: inline-flex
+	vertical-align: top
+	flex-flow: column nowrap 
+	justify-content: center
+	max-width: 230px 
+	width: 100% 
+	height: 230px 
+	margin-bottom: 40px 
+	color: #24BC52 
+	border: 4px solid #24BC52 
+	border-radius: 50%
+	&:not(:last-child)
+		margin-right: 20px
+		
+	&__text
+		font-size: 18px
+		line-height: 1.2
+		color: #000 
+		+light
+		&_mt
+			margin-top: -20px
+	&__value
+		padding: 10px 0
+		color: #24bc52
+		+light
+		line-height: 0.8
+		&_big
+			font-size: 82px
+		&_mid
+			font-size: 56px
+			letter-spacing: -4px 
+	&__pic
+		margin-bottom: 10px 
+
+.profit-desc
+	display: table
+	max-width: 700px 
+	width: 100% 
+	margin: 0 auto  
+	&__item
+		display: table-cell
+		vertical-align: middle
+		font-size: 18px
+		color: #000 
+		line-height: 1.3
+		+light
+		&:last-child
+			padding-left: 30px
+.icon-lock
+	font-size: 62px
+	color: #24bc52
+
+.icon-shield
+	font-size: 88px
+	color: #24bc52
+
+.videos
+	font-size: 0
+	margin-bottom: 30px
+	&__cell
+		display: inline-block
+		vertical-align: top
+		width: 50% 
+		&:first-child
+			padding-right: 20px 
+			+r(1024)
+				padding-right: 0
+		&:last-child
+			padding-left: 20px 
+			+r(1024)
+				padding-left:  0
+		+r(1024)
+			display: block
+			width: 100% 
+	&__caption
+		font-size: 18px
+		color: #005E30
+		text-align: center 
+		+light
+
+.video-item
+	position: relative
+	margin-bottom: 10px 
+	padding-bottom: 56.5%
+	height: 0
+	width: 100%
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%

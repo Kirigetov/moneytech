@@ -1,0 +1,72 @@
+
+.lang
+	position: absolute
+	top: 5px
+	right: 20px
+	display: inline-block 
+	text-align: center
+	&:hover
+		.lang__list
+			visibility: visible
+			opacity: 1
+	&__current,
+	&__link
+		display: block
+		text-decoration: none 
+		+med
+		padding: 15px 0
+		font-size: 18px
+		color: #252525
+	&__current
+		position: relative
+		.lang__link
+			padding: 0 
+		&:after
+			content: "" 
+			display: inline-block
+			+s('arrow_down')
+			width: 14px 
+			margin-bottom: -1px
+			margin-left: 3px 
+	&__link
+		background: #FFF 
+		transition: background 0.2s
+		cursor: pointer
+		&:hover
+			background: #e1e1e1
+		&:active
+			color: #009933 
+	&__list
+		position: relative
+		margin-top: -2px 
+		z-index: 10 
+		visibility: hidden
+		opacity: 0
+		transition: opacity 0.2s
+	li
+		width: 70px 
+
+.lang_mob
+	position: relative
+	top: auto 
+	right: auto 
+	display: block
+	text-align: right
+	margin-right: 20px
+	margin-top: 10px
+	.lang__current
+		float: right
+		min-width: 50px 
+		text-align: center
+		&:after
+			content: none 
+	.lang__list
+		overflow: hidden
+		visibility: visible
+		opacity: 1
+		margin-right: 50px
+	li
+		display: inline-block
+		width: 50px 
+		text-align: center
+		

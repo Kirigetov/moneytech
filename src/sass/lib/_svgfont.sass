@@ -5,8 +5,13 @@
 	font-weight: normal
 	font-style: normal
 
-$icon-fb: "\EA03"
-$icon-tw: "\EA06"
+$icon-at: "\EA01"
+$icon-fb: "\EA02"
+$icon-in: "\EA03"
+$icon-lock: "\EA04"
+$icon-shield: "\EA05"
+$icon-skype: "\EA06"
+$icon-tw: "\EA07"
 
 
 %icon
@@ -23,7 +28,17 @@ $icon-tw: "\EA06"
 	@extend %icon
 	display: inline-block
 
+.icon-at:before
+	content: $icon-at
 .icon-fb:before
 	content: $icon-fb
+.icon-in:before
+	content: $icon-in
+.icon-lock:before
+	content: $icon-lock
+.icon-shield:before
+	content: $icon-shield
+.icon-skype:before
+	content: $icon-skype
 .icon-tw:before
 	content: $icon-tw

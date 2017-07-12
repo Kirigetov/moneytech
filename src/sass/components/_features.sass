@@ -1,0 +1,92 @@
+
+.features
+	&_blocks
+		max-width: 800px 
+		margin: 0 auto 
+		margin-bottom: -20px
+
+.feature
+	position: relative
+	margin-bottom: 15px 
+	padding-left: 52px 
+	font-size: 24px
+	color: #fff
+	+med
+	line-height: 1.23
+	+r(767)
+		margin-bottom: 25px
+		font-size: 22px
+	&:before
+		content: "" 
+		position: absolute
+		left: 0
+		display: inline-block
+		margin-right: 7px 
+	&__img
+		position: relative
+		width: 100px
+		height: 100% 
+		text-align: right
+		margin-right: 10px
+		&:before
+			content: "" 
+			display: inline-block
+	&__text
+		font-size: 30px
+		text-transform: uppercase
+		+bold
+		line-height: 1.25 
+	&_lamp
+		&:before
+			+s('lamp')
+			top: -8px 
+	&_finger
+		&:before
+			+s('finger')
+			top: 12px
+	&_finger_mod
+		&:before
+			top: -8px
+	&_finger_mod_es
+		&:before
+			top: 4px
+	&_arr_up
+		&:before
+			+s('arr_up')
+			top: 12px 
+	&_gear
+		&:before
+			+s('gear')
+			top: 12px 
+			left: -4px 
+	&_bag
+		&:before
+			+s('bag')
+			top: -10px
+	&_bur
+		&:before
+			+s('bur')
+	&_pigcoin
+		&:before
+			+s('pigcoin')
+	&_dolhand
+		&:before
+			+s('dolhand')
+	&_atom
+		&:before
+			+s('atom')
+
+.feature_flex
+	display: flex
+	flex-flow: row wrap 
+	justify-content: space 
+	-webkit-align-items: center 
+	align-items: center 
+	> span
+		display: inline-block
+		vertical-align: top
+	&.feature
+		display: inline-block
+		width: 50% 
+		margin-bottom: 60px
+		padding-left: 0 

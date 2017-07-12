@@ -1,0 +1,38 @@
+.strategy
+	text-align: center
+
+.strategy-list
+	font-size: 0
+	margin: 0 -40px 
+
+.strategy-step
+	display: inline-block
+	vertical-align: top
+	padding: 0 40px
+	&__inner
+		width: 110px
+	&__value
+		margin: 0 auto 15px
+		height: 90px
+		width: 90px  
+		text-align: center
+		background-color: #24bc52
+		border-radius: 50%
+		overflow: hidden
+		+vertical
+		span
+			vertical-align: middle
+			font-size: 72px
+			line-height: 1
+			color: #FFF 
+			+light
+	&__text
+		font-size: 16px
+		line-height: 1.2
+		color: #000 
+		+light
+		&:not(:last-child)
+			margin-bottom: 15px
+	&__number
+		font-size: 24px
+		line-height: 1.5 
