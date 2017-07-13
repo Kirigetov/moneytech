@@ -58,6 +58,8 @@
 	+light
 	&_big
 		font-size: 30px
+	&_mid
+		font-size: 18px
 	&_f-line
 		paddings-bottom: 20px
 	&_l-height
@@ -125,14 +127,17 @@
 		font-size: 24px
 		line-height: 1.2
 		+light
+		+r(767)
+			font-size: 20px
 
 .profit 
 	padding-top: 20px
-	&__points
-		max-width: 980px 
-		margin: 0 auto
-		font-size: 0
-		text-align: center
+
+.circle-items
+	max-width: 980px 
+	margin: 0 auto
+	font-size: 0
+	text-align: center
 
 .circle-item
 	display: inline-flex
@@ -148,7 +153,14 @@
 	border-radius: 50%
 	&:not(:last-child)
 		margin-right: 20px
-		
+	&.circle-timer
+		.circle-item__value
+			margin-bottom: 20px
+			font-size: 57px
+			color: #005e30
+		.circle-item__text		
+			font-size: 34px
+			color: #005e30
 	&__text
 		font-size: 18px
 		line-height: 1.2
@@ -174,6 +186,9 @@
 	max-width: 700px 
 	width: 100% 
 	margin: 0 auto  
+	+r(500)
+		display: flex
+		flex-flow: column nowrap
 	&__item
 		display: table-cell
 		vertical-align: middle
@@ -181,8 +196,18 @@
 		color: #000 
 		line-height: 1.3
 		+light
+		+r(500)
+			display: block
+			margin-bottom: 20px
+			text-align: center
+		&:first-child
+			+r(500)
+				order: 2
 		&:last-child
 			padding-left: 30px
+			+r(500)
+				padding-left: 0
+				order: 1	
 .icon-lock
 	font-size: 62px
 	color: #24bc52
@@ -193,11 +218,13 @@
 
 .videos
 	font-size: 0
-	margin-bottom: 30px
+	&_center
+		text-align: center
 	&__cell
 		display: inline-block
 		vertical-align: top
 		width: 50% 
+		margin-bottom: 30px
 		&:first-child
 			padding-right: 20px 
 			+r(1024)
@@ -227,3 +254,176 @@
 		left: 0
 		width: 100%
 		height: 100%
+
+.statistics
+	max-width: 630px
+	margin: 0 auto
+	+r(650)
+		text-align: center
+	&__item
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 30px
+		&:not(:last-child)
+			margin-right: 30px
+			+r(650)
+				margin-right: 0
+		img
+			box-shadow: 2.5px 4.3px 5px rgba(21, 24, 26, 0.75)
+
+.big-sign
+	color: #24bc52
+	font-size: 48px
+	line-height: 40px
+	+light
+
+.text-flex
+	display: flex
+	flex-flow: row nowrap
+	justify-content: flex-start
+	align-items: flex-start
+	margin-bottom: 30px
+	.text
+		text-align: left
+		margin-left: 10px
+
+.step-arrow
+	position: relative
+	top: 50%
+	vertical-align: middle
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		margin-top: -8px
+		height: 17px
+		width: 100%
+		background-image: url(../img/arrow_line.png)
+		background-repeat: repeat-x
+		background-size: left
+		z-index: 1
+	&:after
+		content: ''
+		position: absolute
+		top: 0	
+		right: 0
+		margin-top: -8px
+		height: 17px
+		width: 10px
+		background-image: url(../img/arrow_start_png.png)
+		background-repeat: no-repeat
+		z-index: 10	
+
+.diagrams
+	text-align: center
+	&__item
+		margin-bottom: 30px
+
+.investing
+	font-size: 0
+	display: flex
+	flex-flow: row wrap
+	align-items: stretch
+	max-width: 760px
+	margin: 0 auto
+	&__item
+		position: relative
+		vertical-align: top
+		padding-bottom: 70px
+		overflow: hidden
+		height: 260px
+		+r(767)
+			padding: 0!important
+			margin-bottom: 50px
+			height: auto
+			&:before
+				height: 100%
+				width: 100%
+		&:before
+			content: ''
+			+coverdiv
+			height: calc(100% - 70px)
+			width: calc(100% - 100px)
+			background-color: #24bc52
+			border-radius: 10px
+			+r(800)
+				height: calc(100% - 70px)
+				width: calc(100% - 70px)
+		&:nth-child(1)
+			padding-right: 100px
+			+r(800)
+				padding-right: 70px
+		&:nth-child(3)
+			+r(767)
+				order: 4
+		&:nth-child(4)
+			padding-left: 100px
+			padding-right: 0
+			&:before
+				left: auto
+				right: 0
+			+r(800)
+				padding-left: 70px
+			+r(767)
+				padding-left: 0
+				order: 3
+	&__item-inner
+		position: relative
+		padding: 20px 30px
+		max-width: 330px
+		min-height: 190px
+		text-align: center
+		background-color: #24bc52
+		border-radius: 10px
+	&__item-step
+		font-size: 48px
+		text-transform: uppercase
+		+light
+		color: #fff
+	&__item-text
+		font-size: 18px
+		line-height: 1.2
+		color: #fff
+		+med
+
+.investing__arrow 
+	+r(767)
+		display: none
+		
+	&_right
+		left: 30%
+		width: 100%
+		z-index: 0
+		+r(800)
+			left: 20%
+	&_down
+		top: 48%
+		left: 0%
+		transform: rotate(90deg)
+	&_left
+		transform: scaleX(-1)
+		left: auto
+		right: 30%
+		+r(800)
+			right: 21%
+		
+
+.timer-title
+	position: relative
+	max-width: 340px
+	margin: 40px auto 0
+	padding-bottom: 60px
+	overflow: hidden
+	
+	+r(767)
+		// margin: 25px 0
+
+.timer-arrow
+	top: -100px
+	+r(500)
+		display: none
+		
+	&_left
+		transform: rotate(115deg)
+	&_right
+		transform: rotate(65deg)

@@ -1,13 +1,32 @@
 $(document).ready(function() {
 
     // // countdown
-    $(".js-timer").countdown('2017/06/28 23:00:00', function(event) {
+    $(".js-timer").countdown('2017/08/02', function(event) {
         $('.js-timer-days').text(event.strftime('%D'));
         $('.js-timer-hour').text(event.strftime('%H'));
         $('.js-timer-min').text(event.strftime('%M'));
         $('.js-timer-sec').text(event.strftime('%S'));
     });
-    
+
+    $('.js-timer-tokken')
+      .prop('number', 214815)
+      .animateNumber(
+        {
+          number: 0,
+          numberStep: function(now, tween) {
+            var target = $(tween.elem),
+                rounded_now = Math.round(now);
+
+            target.text(now === tween.end ? 'Launch!' : rounded_now);
+          }
+        },
+        1641600000,  // до 02.08.2017
+
+        'linear'
+    );
+
+
+
 
     //effects
     function visibility(){

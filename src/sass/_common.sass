@@ -100,6 +100,11 @@ a
 	margin-bottom: 40px  
 	&_green
 		color: #005E30 
+	+r(1024)
+		font-size: 32px
+		margin-bottom: 30px
+	+r(767)
+		font-size: 28px
 
 .title-h3
 	color: #24BC52 
@@ -109,14 +114,19 @@ a
 	text-transform: uppercase
 	text-align: center
 	margin-bottom: 40px
+	+r(767)
+		font-size: 20px
 	&_ml
 		margin-left: 55px
+		+r(1024)
+			margin-left: 0
 	&_mb-mid
 		margin-bottom: 20px
 	
 .join-btn
 	display: inline-block
-	width: 290px 
+	max-width: 390px 
+	width: 100% 
 	margin-bottom: 50px
 	padding: 10px 0
 	border-radius: 24px
@@ -127,6 +137,7 @@ a
 	cursor: pointer
 	text-align: center
 	+light
+	text-transform: uppercase
 	&:hover
 		background: rgba(#fff, 1) 
 	&_bl
@@ -134,3 +145,36 @@ a
 		margin: 0 auto 50px 
 	&_mb-mid 
 		margin-bottom: 25px
+	+r(500)
+		font-size: 20px
+	
+.btn-wrap
+	text-align: center
+
+.btn, .like-btn
+	display: inline-block
+	padding: 12px 35px
+	color: #02852e
+	border: 1px solid rgba(1, 2, 2, 0.07)
+	border-radius: 20px
+	box-shadow: 5.5px 9.5px 20px rgba(20, 20, 21, 0.08)
+	transition: background 0.15s
+	+light
+	font-size: 27px
+	text-transform: uppercase
+	&:hover
+		background: rgba(#02852e, 0.7) 
+	&_green
+		background-color: #24bc52
+		color: #fff
+	+r(1024)
+		font-size: 28px
+	+r(767)
+		font-size: 20px
+
+.like-btn
+	position: relative
+	z-index: 2
+	font-size: 40px
+
+		

@@ -3,6 +3,18 @@
 .ico
 	&__cols
 		font-size: 0
+		&_center
+			text-align: center
+			.ico__col
+				&:first-child
+					padding: 0
+			.ico-bars
+				text-align: left
+				max-width: 350px
+				width: 100%
+				margin: 0 auto 50px
+				+r(800)
+					margin-bottom: 20px
 	&__col
 		display: inline-block
 		vertical-align: top
@@ -35,7 +47,7 @@
 	font-size:  24px
 	color: #FFF 
 	+r(767)
-		font-size: 22px
+		font-size: 20px
 
 [data-bar= '1']
 	padding-right: 5px 
