@@ -61,6 +61,7 @@
 
 .header-contacts
     display: table
+    cursor: pointer
     width: 100% 
     &__cell
         display: table-cell
@@ -73,7 +74,7 @@
         line-height: 1
         +med
     &__skype
-        a
+        span
             display: block 
             position: relative
             width: 50px 
@@ -82,15 +83,15 @@
             font-size: 50px
             color: #005e30
     &__info, &__mail
-        a
+        span
             font-size: 24px
             text-decoration: none
             +light
             line-height: 1
     &__mail
-        a
+        span
             color: #252525
     &__info
-        a
+        span
             text-transform: uppercase
             color: #093
